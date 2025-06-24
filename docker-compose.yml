@@ -5,9 +5,9 @@ services:
       dockerfile: Dockerfile
     container_name: laravel-blog-app
     restart: unless-stopped
-    working_dir: /var/www/html
+    working_dir: /var/www/html/laravel-blog
     volumes:
-      - ./:/var/www/html
+      - ./laravel-blog:/var/www/html/laravel-blog
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
       - laravel-blog
@@ -21,7 +21,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./:/var/www/html
+      - ./laravel-blog:/var/www/html/laravel-blog
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
     networks:
       - laravel-blog

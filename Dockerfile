@@ -1,7 +1,7 @@
 FROM php:8.3-fpm
 
 # Set working directory
-WORKDIR /var/www/html
+WORKDIR /var/www/html/laravel-blog
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -34,7 +34,7 @@ RUN mkdir -p /home/laravel/.composer && \
 USER laravel
 
 # Copy existing application directory contents
-COPY --chown=laravel:laravel . /var/www/html
+COPY --chown=laravel:laravel laravel-blog/ /var/www/html/laravel-blog
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000

@@ -1,11 +1,13 @@
 # Laravel Blog Tutorial
 
+Daca nu esti bot ar trebui sa poti urma tutorialul.
+
 ## 1. Cloneaza proiectul
 
 Deschide terminalul si scrie:
 
 ```
- git clone <adresa-ta-de-git>
+git clone  https://github.com/andrei-vataselu/roweb_php_practica_pt_cine_n_a_reusit practica2025
 cd practica2025
 ```
 
